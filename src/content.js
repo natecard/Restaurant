@@ -1,23 +1,23 @@
 function pageContent() {
-  const content = document.getElementById('content');
-  const title = document.createElement('h1');
-  const bodyText = document.createElement('p');
-  //const credit = document.createElement('p')
-
-
-  title.textContent = ('Welcome to the Lucky Peach')
-  bodyText.innerText = ('Thank you for choosing to join the Lucky Peach, \ we welcome you and your guests for a very wonderful evening.');
-  //credit.textContent = ('Photo by <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Tomasso</a> on <a href="https://unsplash.com/s/photos/restaurant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>')
-
-  title.style.color = 'white'
-  bodyText.style.color = 'white'
-
-
-  content.appendChild(title)
-  content.appendChild(bodyText)
-  //content.appendChild(credit)
-  document.body.style.backgroundImage = "url('../src/resto.jpg')"
-
+  const content = document.createElement('div');
+  content.appendChild(createPara('Thank you for choosing to join us at the Lucky Peach.'));
+  content.appendChild(createPara('We welcome you and your guests for a very wonderful evening.'));
+  content.appendChild(createPara('We specialize in local ingredients sourced, ramen dishes with our pork shoulder, we passionately make all broths fresh each day.'));
+  content.appendChild(createPara('Enjoy our ever rotating selection of craft beer, some Japanese beers, and local favourites.'));
   return content
 };
-document.body.appendChild(pageContent());
+
+function createPara (text) {
+  const paragraph = document.createElement('p');
+  paragraph.textContent = text;
+  paragraph.classList.add('home-para')
+  return paragraph;
+};
+
+function loadHome() {
+  const main = document.getElementById('main');
+  main.textContent = ('')
+  main.appendChild(pageContent());
+};
+
+export default loadHome;

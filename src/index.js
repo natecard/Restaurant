@@ -1,7 +1,3 @@
-import './content.js'
-import './contact.js'
-import './menu.js'
+import intializeSite from './website.js'
 
-pageContent()
-menu()
-contact()
+intializeSite();
