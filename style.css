@@ -1,0 +1,86 @@
+:root {
+  --background-grey: rgba(0,0,0,0.7);
+  --background-white: rgba(256,256,256,0.2)
+}
+html {
+  line-height: 1.2;
+  background-image: url('../src/resto.jpg');
+
+}
+header {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-grey);
+}
+button {
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  border-style: none;
+  outline: none;
+}
+.button-nav {
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  transition: transform 0.3s;
+}
+.button-nav.active {
+  border-bottom: 4px solid rgba(256,256,256, 1);
+}
+body {
+  color:rgb(255, 255, 255);
+}
+.footer {
+  display: flex;
+  box-sizing: content-box;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0.5rem 1rem 1rem;
+  background-color: var(--background-grey)
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  animation: fadeIn 3.5s;
+  padding: 1rem;
+  margin: 1rem;
+}
+.menu-item {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 10rem;
+  width: auto;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--background-white);
+  transition: background-color 0.5s;
+}
+.main {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: var(--background-grey);
+}
+.caps {
+  font-size: 1.5rem;
+}
+.description {
+  font-size: 1rem;
+}
+.home-para {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+.item {
+  font-size: 2rem;
+}
+.contact-body {
+  padding: 1rem;
+  margin: 1rem;
+}
